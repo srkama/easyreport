@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/pure-min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="pure-g-r">
+    <div class="pure-u-1">
+        <div class="hero">
+            <div class="hero-titles">
+                <form class="pure-form pure-form-aligned" method="POST">
+                    {% csrf_token %}
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="username">Username</label>
+                            <input name="username" id="username" type="text" placeholder="Username">
+                        </div>
+
+                        <div class="pure-control-group">
+                            <label for="password">Password</label>
+                            <input name="password" id="password" type="password" placeholder="Password">
+                        </div>
+
+                        <div class="pure-controls">
+                            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                        </div>
+                        <div class="pure-controls">
+                            <a href="/register/" > New User? Register</a>
+                        </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
